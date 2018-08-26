@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="assets/scripts/game.js"></script>
+  </head>
+
+  <body>
+      
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h2>Welcome to my X-MEN Themed Hangman game!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-4 game_play">
+        <h4>Guess this X-MEN character!</h4>
+        <br>
+        <p id="displayed_word">_  _  _  _</p>
+        <br>
+        <div class="alert alert-info">
+          Guesses Remaining : <span id="guesses_remaining">10</span>
+        </div>
+        <div class="alert alert-success">
+          Wins : <span id="Wins">0</span>
+        </div>
+        <div class="alert alert-danger">
+          Losses : <span id="Losses">0</span>
+        </div>
+        <div class="alert alert-info" id="answer-display">
+        </div>
+        <button type="button" class="btn btn-primary" id="new-game-btn" onclick="newGameClicked()">Play New Game</button>
+      </div>
+    </div>
+
+  </body>
+
+</html>

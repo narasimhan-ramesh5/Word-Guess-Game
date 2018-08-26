@@ -1,0 +1,26 @@
+.jumbotron{
+  height:5%;
+  text-align:center;
+  background-color:#0047AB;
+  color:white;
+}
+
+.game_zone{
+  text-align:center;
+}
+
+#displayed_word{
+  font-size:40px;
+}
+
+.alert{
+  width:30%;
+}
+
+body{
+  color:#0047AB;
+}
+
+#new-game-btn{
+  background-color:#0047AB;
+}

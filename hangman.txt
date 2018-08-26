@@ -1,0 +1,80 @@
+Hangman
+{
+   attributes:
+       
+       words_list : ['Pink Floyd', 'The Doors', 'Woodstock' ...]
+
+       current_game : {
+
+         word_to_guess : "Pink Floyd" 
+ 
+         letters_guessed : integer
+  
+         remaining_chances : integer
+
+         letters_guessed : integer
+
+         player_won : uninit or false
+       }
+
+       wins : integer
+       losses : integer
+}
+
+initialization:
+ 
+- Page Loads
+
+- wins = losses = 0
+
+- hangman.words_list = /* initialize with words */
+
+- current_game = hangman.current_game
+  
+  - current_game.word_to_guess = random choice from words_list
+
+  - current_game.remaining_chances = 2 * length of word_to_guess
+
+  - current_game.letters_guessed = 0
+ 
+  - current_game.player_won = false
+
+- Display the word to guess for current game, and guesses remaining
+
+
+- Event Loop
+
+  - When user types a letter
+
+    - If the letter isn't present in the list
+
+      - Play 'Womp Womp' 
+      - Decrease current_game.remaining_chances
+      - If current_game.remaining_chances is 0
+        - increase hangman.losses by 1
+        - display "game over - press enter to start new game"
+      
+    - Else the letter is present in the list
+   
+      - If that letter has already been guessed at every occurrence
+        - Print "you already guessed x" where x is the letter
+
+      - else
+         Loop through the word to find every occurrence of the letter
+          - Place that letter in the corresponding locations in
+            current_game.word_guessed
+          - increment current_game.letters_guessed by 1
+
+         if(current_game.letters_guessed = length(word_to_guess))
+           - current_game.player_won = TRUE;
+           - Increase hangman.wins by 1
+           - play "All I do is win win win"
+           
+  
+
+
+   
+
+       
+
+       
